@@ -23,7 +23,7 @@
 
 .decorated-zone::before,
 .decorated-zone::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 25px;
   height: 25px;
@@ -33,7 +33,7 @@
 .decorated-zone::before {
   border-top: none;
   border-right: none;
-  bottom: 10px; 
+  bottom: 10px;
   left: 10px;
 }
 
@@ -56,13 +56,13 @@
 }
 
 .REC::after {
-  content: '';
-  display: inline-block; 
+  content: "";
+  display: inline-block;
   width: 9px;
   height: 9px;
   margin-block-end: 2px;
   margin-inline-start: 10px;
-  box-shadow:  0px 0px 4px 2px rgba(255, 0, 112, 1);
+  box-shadow: 0px 0px 4px 2px rgba(255, 0, 112, 1);
   border: none;
   border-radius: 50%;
   background-color: var(--accent-text-color);
@@ -93,9 +93,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.header__theme-menu-button-text {
   color: var(--accent-text-color);
   font-size: var(--text-font-size);
   text-transform: lowercase;
@@ -112,7 +109,7 @@
   border-bottom: 1px solid var(--accent-text-color);
 }
 
-.header__theme-menu-button_active{
+.header__theme-menu-button_active {
   outline: 1px solid var(--accent-text-color);
   pointer-events: none;
 }
@@ -154,6 +151,7 @@
   grid-template-columns: 1fr;
   gap: 50px;
   padding: 0px 10px 10px 10px;
+  margin-block-start: 40px;
 }
 
 .articles-section {
@@ -165,13 +163,13 @@
 .articles-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
+  gap: 20px;
 }
 
 .advice-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
+  gap: 20px;
 }
 
 .articles-section-title {
@@ -222,6 +220,12 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
+  grid-template-areas:
+    "sunset"
+    "ice-cream"
+    "tape"
+    "books"
+    "street";
 }
 
 .image-container {
@@ -231,11 +235,11 @@
 .image {
   width: 100%;
   height: 100%;
-  object-fit:cover;
+  object-fit: cover;
   object-position: center;
 }
 
-.footer{
+.footer {
   height: 100vh;
   min-height: 668px;
   padding: 10px;
@@ -275,15 +279,20 @@
   .header {
     min-height: 1024px;
     grid-template-columns: minmax(364px, 1fr) minmax(364px, 1fr);
-    grid-template-rows: minmax(442px, 4.42fr) minmax(100px, 1fr) minmax(442px, 4.42fr);
+    grid-template-rows: minmax(442px, 4.42fr) minmax(100px, 1fr) minmax(
+        442px,
+        4.42fr
+      );
     padding: 20px;
   }
-  .REC { 
+
+  .REC {
     right: 29px;
     top: 20px;
   }
+
   .decorated-zone::before {
-    bottom: 20px; 
+    bottom: 20px;
     left: 20px;
   }
 
@@ -293,12 +302,12 @@
   }
 
   .header__title {
-    grid-column: 1/3;
-    grid-row: 2/2;
+    grid-column: 1 / 3;
+    grid-row: 2 / 2;
   }
 
   .title__text {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); 
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__description-text-container {
@@ -319,13 +328,13 @@
     column-gap: 20px;
   }
   .artical-container {
-    grid-column: 2/3;
+    grid-column: 2 / 3;
   }
 
   .articles-list {
     grid-row-start: 2;
     grid-row-end: auto;
-    grid-column: 1/3;
+    grid-column: 1 / 3;
     gap: 0px;
     row-gap: 20px;
   }
@@ -333,7 +342,7 @@
   .advice-list {
     grid-row-start: 1;
     grid-row-end: auto;
-    grid-column: 2/3;
+    grid-column: 2 / 3;
     gap: 0px;
     row-gap: 20px;
   }
@@ -342,24 +351,27 @@
     grid-column: 1/2;
   }
 
-  .advice-list h3:first-child {
+  .advice-list > h3:first-child {
     margin-block-end: 0px;
   }
 
   .pictures-grid-container {
     grid-template-columns: repeat(3, minmax(230px, 1fr));
-    grid-template-rows: minmax(192px, 1fr) minmax(230px, 1.2fr) minmax(318px, 1.65fr);
+    grid-template-rows: minmax(192px, 1fr) minmax(230px, 1.2fr) minmax(
+        318px,
+        1.65fr
+      );
     gap: 20px;
-    grid-template-areas: 
-    "sunset sunset ice-cream"
-    "tape books ice-cream"
-    "tape street street";
+    grid-template-areas:
+      "sunset sunset ice-cream"
+      "tape books ice-cream"
+      "tape street street";
   }
 
-  .footer{
+  .footer {
     min-height: 1024px;
     padding: 20px;
-    margin-block-start: 20px;
+    margin-block-start: 40px;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -370,12 +382,15 @@
   .header {
     min-height: 768px;
     grid-template-columns: minmax(492px, 1fr) minmax(492px, 1fr);
-    grid-template-rows: minmax(300px, 2.3fr) minmax(130px, 1fr) minmax(300px, 2.3fr);
+    grid-template-rows: minmax(300px, 2.3fr) minmax(130px, 1fr) minmax(
+        300px,
+        2.3fr
+      );
     padding: 20px;
   }
 
   .header__theme-menu {
-    grid-column: 1 /3;
+    grid-column: 1 / 3;
     grid-row: 1;
     justify-self: center;
     align-self: start;
@@ -385,13 +400,13 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .REC { 
+  .REC {
     right: 29px;
     top: 20px;
   }
 
   .decorated-zone::before {
-    bottom: 20px; 
+    bottom: 20px;
     left: 20px;
   }
 
@@ -400,12 +415,12 @@
     right: 20px;
   }
   .title__text {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); 
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__title {
-    grid-column: 1/3;
-    grid-row: 2/2;
+    grid-column: 1 / 3;
+    grid-row: 2 / 2;
   }
 
   .header__description-text-container {
@@ -432,7 +447,7 @@
   .articles-list {
     grid-row-start: 2;
     grid-row-end: 2;
-    grid-column: 1/3;
+    grid-column: 1 / 3;
     grid-template-columns: repeat(3, minmax(315px, 1fr));
     gap: 20px;
   }
@@ -444,32 +459,35 @@
   .advice-list {
     grid-row-start: 1;
     grid-row-end: auto;
-    grid-column: 2/3;
+    grid-column: 2 / 3;
     gap: 0px;
     row-gap: 20px;
   }
 
   .advice-list .artical-container {
-    grid-column: 1/2;
+    grid-column: 1 / 2;
   }
 
-  .advice-list  h3:first-child {
+  .advice-list > h3:first-child {
     margin-block-end: 0px;
   }
 
   .pictures-grid-container {
     grid-template-columns: repeat(3, minmax(230px, 1fr));
-    grid-template-rows: minmax(192px, 1fr) minmax(230px, 1.2fr) minmax(318px, 1.65fr);
+    grid-template-rows: minmax(192px, 1fr) minmax(230px, 1.2fr) minmax(
+        318px,
+        1.65fr
+      );
     gap: 20px;
-    grid-template-areas: 
-    "sunset sunset ice-cream"
-    "tape books ice-cream"
-    "tape street street";
+    grid-template-areas:
+      "sunset sunset ice-cream"
+      "tape books ice-cream"
+      "tape street street";
   }
 
-  .footer{
+  .footer {
     padding: 20px;
-    margin-block-start: 20px;
+    margin-block-start: 40px;
     min-height: 768px;
     align-items: center;
     justify-content: center;

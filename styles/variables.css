@@ -9,7 +9,7 @@
   --accent-color-hover: rgba(255, 0, 112, 0.4);
   --page-background-image: url(../images/cover-image-dark.png);
   --text-font-size: 18px;
-  --text-font-family: 'IBM Plex mono', sans-serif;
+  --text-font-family: "IBM Plex mono", sans-serif;
   --no-focus-text-color: rgba(219, 0, 255, 1);
   --bold-text-color: rgba(0, 0, 40, 1);
   --text-color: rgba(241, 178, 206, 1);
